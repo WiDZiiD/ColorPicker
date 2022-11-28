@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="44dp">
+
+
+        <com.example.myapplication.DrawImageView
+            android:id="@+id/imageGallery"
+            android:layout_width="match_parent"
+            android:layout_height="318dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <SeekBar
+            android:id="@+id/seekBarX"
+            android:layout_width="270dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageGallery" />
+
+        <SeekBar
+            android:id="@+id/seekBarY"
+            android:layout_width="270dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ediTextX" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_background"
+            android:text="Open Gallery"
+            app:icon="@drawable/ic_gallery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ediTextY" />
+
+
+        <EditText
+            android:id="@+id/ediTextX"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewX"
+            app:layout_constraintStart_toEndOf="@+id/textViewX"
+            app:layout_constraintTop_toTopOf="@+id/textViewX"
+            app:layout_constraintVertical_bias="0.592" />
+
+        <EditText
+            android:id="@+id/ediTextY"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewY"
+            app:layout_constraintStart_toEndOf="@+id/textViewY"
+            app:layout_constraintTop_toTopOf="@+id/textViewY"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <View
+            android:id="@+id/colorPixel"
+            android:layout_width="352dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></View>
+
+        <TextView
+            android:id="@+id/RGB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="RGB :"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <TextView
+            android:id="@+id/redText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/RGB"
+            app:layout_constraintTop_toTopOf="@+id/RGB" />
+
+        <TextView
+            android:id="@+id/greenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/redText"
+            app:layout_constraintTop_toTopOf="@+id/RGB" />
+
+        <TextView
+            android:id="@+id/blueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/greenText"
+            app:layout_constraintTop_toTopOf="@+id/RGB" />
+
+        <TextView
+            android:id="@+id/hexValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textIsSelectable="true"
+            app:layout_constraintStart_toEndOf="@+id/HEX"
+            app:layout_constraintTop_toBottomOf="@+id/redText" />
+
+        <TextView
+            android:id="@+id/HEX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="HEX :"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/RGB"
+            app:layout_constraintTop_toBottomOf="@+id/RGB" />
+
+        <TextView
+            android:id="@+id/textViewX"
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:text="X :"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBarX"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/seekBarX"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewY"
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:text="Y :"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBarY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/seekBarY"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
